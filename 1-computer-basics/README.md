@@ -4,7 +4,7 @@ This section introduces the **fundamental building blocks** of computer systems 
 
 ## 📘 Lessons
 
-1. [Number System Basics](1-computer-basics/number-systems-and-exponents.md)
+1. [Number System Basics](number-systems-and-exponents.md)
 2. [Common Bases and Exponents](./2-common-bases.md)
 3. [Encoding and Computer Layers](./3-encoding-and-computer-layers.md)
 4. [Computer Components Overview](./4-computer-components.md)

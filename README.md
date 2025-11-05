@@ -96,7 +96,7 @@ from the **basics of computing** to the **core of ethical hacking**.
 - 🔜 Scanning & Enumeration (coming soon)  
 - 🔜 Exploitation Basics (coming soon)  
 - 🔜 Post-Exploitation (coming soon)
-
+- 🔜 and more.......
 ---
 
 ## 🧠 About This Repository  

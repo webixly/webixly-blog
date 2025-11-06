@@ -1,0 +1,121 @@
+# 📱 Mobile Devices and BIOS  
+
+As technology evolved, **computing power** became smaller, portable, and more energy-efficient — giving rise to **mobile devices** such as smartphones, tablets, and laptops.  
+At the same time, the **BIOS (Basic Input/Output System)** remained a crucial component in all computers, ensuring that hardware starts correctly before the operating system loads.
+
+---
+
+## 📱 1️⃣ Mobile Devices Overview  
+
+### 🔹 What Are Mobile Devices?  
+**Mobile devices** are portable computers designed to provide computing power on the go.  
+They include smartphones, tablets, laptops, and even smartwatches.
+
+### 💡 Key Characteristics  
+- **Portable and lightweight**  
+- **Battery-powered** (no need for constant external power)  
+- **Wireless connectivity** (Wi-Fi, Bluetooth, 4G/5G)  
+- **Touch-based or compact input methods**  
+- **Optimized operating systems** (Android, iOS, Chrome OS, etc.)
+
+---
+
+## ⚙️ 2️⃣ Main Components of Mobile Devices  
+
+| Component | Description |
+|------------|-------------|
+| **CPU (System-on-Chip)** | Integrates CPU, GPU, and modem on a single chip for efficiency. |
+| **RAM** | Volatile memory used for temporary data storage. |
+| **Storage (Flash Memory)** | Permanent storage for OS, apps, and files. |
+| **Battery** | Supplies power to all components. |
+| **Display** | Often touch-sensitive, serving as both input and output. |
+| **Sensors** | Includes accelerometers, gyroscopes, GPS, etc. |
+| **Network Modules** | Enables communication via Wi-Fi, Bluetooth, cellular, or NFC. |
+
+> 🧠 The **SoC (System-on-Chip)** is the brain of modern mobile devices — combining computing, graphics, and networking functions in one unit.
+
+---
+
+## 🔋 3️⃣ Mobile Operating Systems  
+
+| OS | Developer | Platform | Notes |
+|----|------------|-----------|-------|
+| **Android** | Google | Open-source (Linux-based) | Most popular mobile OS worldwide. |
+| **iOS** | Apple | Closed-source | Optimized for Apple devices only. |
+| **Windows Mobile** | Microsoft | Discontinued | Used in older devices. |
+| **Chrome OS** | Google | Lightweight OS | Used in Chromebooks. |
+
+> 🔧 Mobile OSs are optimized for **touch control**, **low power consumption**, and **seamless app ecosystems**.
+
+---
+
+## 🧠 4️⃣ What Is the BIOS?  
+
+**BIOS** stands for **Basic Input/Output System** — a firmware stored on a small chip on the motherboard.  
+It initializes and tests hardware components when you power on the computer.
+
+### 🔹 Main Responsibilities  
+- Performs **POST (Power-On Self-Test)** to check hardware.  
+- **Detects and configures** devices (CPU, RAM, drives).  
+- **Loads the bootloader** to start the operating system.  
+- Provides **firmware-level configuration** (boot order, hardware settings).  
+
+> ⚙️ The BIOS operates before the OS and is essential for the computer’s startup process.
+
+---
+
+## 🧩 5️⃣ BIOS vs. UEFI  
+
+Modern systems have replaced traditional BIOS with **UEFI (Unified Extensible Firmware Interface)**.
+
+| Feature | BIOS | UEFI |
+|----------|------|------|
+| **Storage Support** | Up to 2 TB | Over 2 TB |
+| **Boot Speed** | Slower | Faster |
+| **Interface** | Text-based | Graphical |
+| **Security** | Limited | Supports Secure Boot |
+| **Compatibility** | Legacy | Modern systems |
+
+> 🧠 UEFI offers a more user-friendly interface, faster booting, and better security options.
+
+---
+
+## 🧩 6️⃣ Common BIOS Settings  
+
+| Setting | Function |
+|----------|-----------|
+| **Boot Order** | Defines which drive or device to boot from first. |
+| **CPU Configuration** | Enables or disables CPU cores, virtualization, etc. |
+| **Fan Control** | Adjusts fan speed for temperature management. |
+| **Security Settings** | Manages passwords and Secure Boot. |
+| **Time & Date** | System clock configuration. |
+
+> ⚠️ Be cautious when changing BIOS settings — incorrect configurations can prevent the computer from booting properly.
+
+---
+
+## ⚙️ 7️⃣ How BIOS and Mobile Devices Differ  
+
+| Feature | Desktop BIOS | Mobile Firmware |
+|----------|---------------|-----------------|
+| **Update Method** | Manual (via USB or software) | Automatic (via OTA updates) |
+| **Customization** | High (user-controlled) | Limited (manufacturer-controlled) |
+| **Boot Process** | BIOS/UEFI → OS | Bootloader → Kernel → OS |
+| **Hardware Access** | Modular | Integrated (SoC) |
+
+> 📱 Mobile devices integrate hardware and firmware much tighter than traditional PCs for stability and power efficiency.
+
+---
+
+## 🔍 Summary  
+
+- **Mobile devices** are compact computers optimized for mobility, power efficiency, and connectivity.  
+- **BIOS/UEFI** initializes the system hardware before the OS loads.  
+- **UEFI** is the modern, more advanced version of BIOS with better performance and security.  
+- Understanding both helps in troubleshooting, system tuning, and understanding how systems start from the hardware level.
+
+---
+
+## 🧠 Next Lesson  
+
+➡️ *Coming soon: Networking Fundamentals (Introduction to Networking)*  

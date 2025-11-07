@@ -18,6 +18,7 @@ A MAC address consists of **48 bits (6 bytes)**, usually written as **12 hexadec
 00:1A:2B:3C:4D:5E
 
 or sometimes:
+
 00-1A-2B-3C-4D-5E
 
 ### Breakdown:

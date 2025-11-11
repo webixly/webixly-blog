@@ -49,9 +49,9 @@ CIDR (Classless Inter-Domain Routing) is a simplified way to represent subnet ma
 ---
 
 ## ⚙️ Formula for Hosts  
-\[
-\text{Number of Hosts} = 2^{(32 - \text{CIDR})} - 2
-\]
+
+**Number of Hosts = 2^(32 − CIDR) − 2**
+
 
 - Subtract **2** because one address is for **network ID**, and one for **broadcast**.
 

@@ -1,109 +1,101 @@
-# 🧩 MAC Address (Media Access Control Address)
+# Subnet Mask
 
-## ⚙️ What Is a MAC Address?
+## Introduction
 
-A **MAC Address** (Media Access Control Address) is a **unique identifier** assigned to a **network interface card (NIC)** by its manufacturer.  
-It operates at the **Data Link Layer (Layer 2)** of the **OSI Model** and is used to **identify devices on a local network (LAN)**.
-
-Every device connected to a network — computer, router, printer, or smartphone — has its own MAC address.
+A **Subnet Mask** is a fundamental concept in networking.
+It determines which part of an IP address identifies the **network** and which part identifies the **host** within that network.
+Understanding subnet masks is essential for efficient IP management and proper network segmentation.
 
 ---
 
-## 🔢 Structure of a MAC Address
+## 1. Concept Explanation
 
-A MAC address consists of **48 bits (6 bytes)**, usually written as **12 hexadecimal digits**.
+Every IP address consists of two logical parts:
+
+* **Network Portion** — identifies the specific network.
+* **Host Portion** — identifies an individual device (host) within that network.
+
+For example:
+
+```
+IP Address:    192.168.1.10  
+Subnet Mask:   255.255.255.0
+```
+
+This means:
+
+* `192.168.1` → Network portion
+* `.10` → Host portion
+
+In this configuration, all devices with addresses between `192.168.1.1` and `192.168.1.254` belong to the same network.
+
+---
+
+## 2. Binary Representation
+
+A subnet mask is written in binary format to define how many bits are used for the network part and how many for the host part.
+
+```
+IP:        192.168.1.10   → 11000000.10101000.00000001.00001010  
+Subnet:    255.255.255.0  → 11111111.11111111.11111111.00000000
+```
+
+Here:
+
+* The first **24 bits** (ones) define the **network**.
+* The remaining **8 bits** (zeros) define the **hosts**.
+  This is represented in CIDR notation as **/24**.
+
+---
+
+## 3. Calculating Number of Hosts
+
+Each subnet provides a certain number of usable host addresses depending on the number of bits allocated for the host part.
+
+**Formula:**
+
+```
+Number of Hosts = 2^(32 − CIDR) − 2
+```
+
+The subtraction of 2 accounts for:
+
+* The **Network Address** (all host bits = 0)
+* The **Broadcast Address** (all host bits = 1)
 
 ### Example:
 
-00:1A:2B:3C:4D:5E
-
-or sometimes:
-
-00-1A-2B-3C-4D-5E
-
-### Breakdown:
-| Section | Bits | Description |
-|----------|------|-------------|
-| **OUI (Organizationally Unique Identifier)** | First 24 bits | Identifies the manufacturer (e.g., Intel, Cisco) |
-| **Device Identifier (NIC Specific)** | Last 24 bits | Unique to each device made by that manufacturer |
+| CIDR | Subnet Mask     | Usable Hosts | Network Bits | Host Bits |
+| ---- | --------------- | ------------ | ------------ | --------- |
+| /24  | 255.255.255.0   | 254          | 24           | 8         |
+| /25  | 255.255.255.128 | 126          | 25           | 7         |
+| /26  | 255.255.255.192 | 62           | 26           | 6         |
+| /27  | 255.255.255.224 | 30           | 27           | 5         |
 
 ---
 
-## 🔍 How MAC Addresses Work
+## 4. Network Design Considerations
 
-When devices communicate on a local network:
+When designing or segmenting a network, subnet masks help to:
 
-1. The sender uses **ARP (Address Resolution Protocol)** to find the MAC address of the destination IP.  
-2. Frames are sent from **source MAC → destination MAC** within the same LAN.  
-3. Switches use **MAC tables** to forward frames to the correct port.  
+* **Control broadcast domains** and reduce congestion.
+* **Enhance security** by isolating groups of hosts.
+* **Improve scalability** and manage IP addresses efficiently.
 
-💡 **Note:** MAC addresses are only used within the same local network; routers use **IP addresses** to communicate between networks.
-
----
-
-## 🧠 Example: Ethernet Frame
-
-| Field | Description |
-|--------|--------------|
-| **Destination MAC** | MAC of the receiving device |
-| **Source MAC** | MAC of the sender |
-| **Payload** | Actual data (like IP packet) |
-| **FCS (Frame Check Sequence)** | Error checking |
+**Tip:**
+Always allocate slightly more host addresses than initially required.
+This ensures future scalability without redesigning the network.
 
 ---
 
-## 🧬 Types of MAC Addresses
+## 5. Summary
 
-| Type | Description |
-|------|--------------|
-| **Unicast** | Sent to a single device |
-| **Multicast** | Sent to multiple specific devices |
-| **Broadcast** | Sent to **all devices** in the network (`FF:FF:FF:FF:FF:FF`) |
-
----
-
-## ⚙️ MAC Address vs IP Address
-
-| Feature | MAC Address | IP Address |
-|----------|--------------|------------|
-| **Layer** | Layer 2 (Data Link) | Layer 3 (Network) |
-| **Purpose** | Identifies physical device | Identifies logical location |
-| **Assigned By** | Manufacturer | Network admin or DHCP |
-| **Changes?** | Permanent (can be spoofed) | Dynamic or static |
-| **Format** | Hexadecimal (e.g., 00:1A:2B...) | Decimal (e.g., 192.168.1.10) |
+* A subnet mask separates the **network** from the **host** portion of an IP address.
+* CIDR notation simplifies mask representation.
+* The number of host bits directly determines subnet size.
+* Proper subnetting leads to efficient, secure, and scalable networks.
 
 ---
 
-## 🧯 Advantages & Importance
-
-✅ **Uniqueness:** Ensures each device can be identified on a LAN  
-✅ **Security:** Can be used in access control lists (MAC filtering)  
-✅ **Troubleshooting:** Helps track devices or detect anomalies  
-✅ **Networking:** Essential for Ethernet, Wi-Fi, and VLANs  
-
----
-
-## ⚠️ MAC Spoofing
-
-Attackers can **change (spoof)** their MAC address to:
-- Bypass MAC filters or firewalls  
-- Impersonate another device  
-- Hide identity on a network  
-
-💡 Network administrators can detect spoofing using **network monitoring tools** and **port security** features on switches.
-
----
-
-## 🔒 In Cybersecurity
-
-MAC addresses are crucial for:
-- **Network access control** (NAC)  
-- **Device fingerprinting**  
-- **Intrusion detection systems (IDS)**  
-- **Forensic analysis** of network activity  
-
----
-
-> 💡 **Tip:** You can view your MAC address using:
-> - **Windows:** `ipconfig /all`  
-> - **Linux/macOS:** `ifconfig` or `ip link show`
+**Author:** Pablo (Webixly)
+**Focus Area:** Networking & Cybersecurity Fundamentals

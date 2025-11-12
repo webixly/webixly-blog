@@ -39,7 +39,7 @@ Each prefix length determines how many IP addresses belong to that network.
 
 The number of usable hosts per subnet is determined by:
 
-[ \text{Number of Hosts} = 2^{(32 - \text{CIDR})} - 2 ]
+Number of Hosts=2^(32−CIDR)−2
 
 For example:
 

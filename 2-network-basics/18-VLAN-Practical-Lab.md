@@ -152,5 +152,3 @@ This lab validates core VLAN concepts with real configurations. Mastering VLAN c
 * Routed access designs
 * Dynamic Trunking Protocol (DTP)
 * VLAN security hardening
-
-أرسل الدرس التالي وسأجهّزه بنفس الأسلوب الأكاديمي.

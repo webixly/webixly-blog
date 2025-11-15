@@ -2,37 +2,36 @@
 
 ## 1. Introduction
 
-Switching is the core of LAN communication. It enables devices to communicate efficiently within the same network by forwarding Ethernet frames based on MAC addresses.
-
-This lesson explains how switches work, why they are essential, and the key concepts every networking student must master.
+Switching is the foundation of modern LAN communication. It allows devices to communicate efficiently by forwarding Ethernet frames based on MAC addresses. Mastering switching concepts is essential before learning VLANs, STP, and advanced routing.
 
 ---
 
-## 2. What is a Switch?
+## 2. What Is a Switch?
 
-A switch is a network device that operates at **Layer 2 (Data Link Layer)** of the OSI model.
-Its primary job is:
+A switch is a device that operates at **Layer 2 (Data Link Layer)** of the OSI model. Its role includes:
 
-* Forward frames
-* Learn MAC addresses
-* Reduce collisions compared to hubs
+* Forwarding Ethernet frames
+* Learning and storing MAC addresses
+* Reducing collisions compared to hubs
+
+Switches make networks faster, more reliable, and more scalable.
 
 ---
 
 ## 3. How Switches Learn MAC Addresses
 
-Switches maintain a **MAC Address Table**.
-They build it dynamically by:
+Every switch contains a **MAC Address Table** (CAM Table).
 
-1. Reading the source MAC address of incoming frames
-2. Mapping it to the port it came from
-3. Storing the entry in the MAC table
+Switches learn MACs by:
 
-When forwarding a frame, the switch:
+1. Reading the **source MAC address** of incoming frames.
+2. Associating that MAC with the port it came from.
+3. Storing the entry temporarily in the MAC table.
 
-* Checks the destination MAC
-* If known → forwards out the specific port
-* If unknown → floods out all ports except the source
+When forwarding frames:
+
+* If **destination MAC is known** → forward to that port only.
+* If **unknown** → flood to all ports except the source.
 
 ---
 
@@ -40,94 +39,89 @@ When forwarding a frame, the switch:
 
 ### Collision Domain
 
-* Each switch port represents **one collision domain**
-* This eliminates collisions that happen in hubs
+* Each switch port = 1 collision domain.
+* Eliminates collisions that were common in hubs.
 
 ### Broadcast Domain
 
-* Switches forward broadcasts across all ports
-* Broadcast domains are only broken by routers or VLANs
+* Switches forward broadcasts out all ports.
+* Broadcast domains are only segmented by **routers** or **VLANs**.
 
 ---
 
-## 5. Switching Methods
+## 5. Switching Forwarding Methods
 
-Switches may use different techniques to forward frames:
+### 1. Store-and-Forward
 
-### **1. Store-and-Forward**
+* Receives the entire frame.
+* Performs error checking (CRC).
+* Most reliable.
 
-* Receives the entire frame
-* Checks for errors (CRC)
-* Most accurate, recommended
+### 2. Cut-Through
 
-### **2. Cut-Through**
+* Forwards as soon as the destination MAC is read.
+* Faster but less accurate.
 
-* Starts forwarding as soon as destination MAC is read
-* Faster but may forward corrupted frames
+### 3. Fragment-Free
 
-### **3. Fragment-Free**
-
-* Reads first 64 bytes (where most errors occur)
-* Compromise between accuracy and speed
+* Reads the first 64 bytes (where errors usually appear).
+* Hybrid of speed + accuracy.
 
 ---
 
-## 6. Switching Table Aging
+## 6. MAC Table Aging
 
-MAC address entries age out after a default time (usually 300 seconds).
-If no frames are received from a MAC within that time, it is removed.
-This prevents stale entries.
+MAC entries expire after a default timer (often 300 seconds). If a device stops sending traffic, its MAC is removed to free memory and prevent stale mappings.
 
 ---
 
-## 7. Duplex Modes
+## 7. DuplexModes
 
-### **Half Duplex**
+### Half Duplex
 
-* One-way communication at a time
-* Legacy and inefficient
+* Communication one direction at a time.
+* Old and inefficient.
 
-### **Full Duplex**
+### Full Duplex
 
-* Send + receive simultaneously
-* Requires a switch + NIC that supports it
-* Standard in modern networks
+* Sends and receives simultaneously.
+* Requires compatible switch + NIC.
+* Standard in modern networks.
 
 ---
 
 ## 8. Switch Port Speeds
 
-Common speeds:
+Typical speeds:
 
-* 10 Mbps (Ethernet)
-* 100 Mbps (Fast Ethernet)
-* 1 Gbps (Gigabit Ethernet)
-* 10 Gbps+ (modern enterprise speeds)
+* 10 Mbps — Ethernet
+* 100 Mbps — Fast Ethernet
+* 1 Gbps — Gigabit Ethernet
+* 10+ Gbps — Enterprise and datacenter links
 
 ---
 
-## 9. MAC Filtering & Port Security (Preview)
+## 9. Basic Switch Security Concepts (Preview)
 
-Switches can secure ports by:
+Switches can enhance security through:
 
-* Limiting allowed MAC addresses
-* Blocking unknown devices
-* Preventing MAC flooding attacks
+* Port security (limiting MACs)
+* MAC filtering
+* Protection against MAC flooding attacks
 
-(This topic will be covered in a later lesson.)
+These topics will be covered in advanced lessons.
 
 ---
 
 ## 10. Summary
 
-Switches:
+Switching provides the backbone of internal network communication by:
 
-* Forward frames using MAC addresses
-* Reduce collision domains
-* Maintain MAC address tables
-* Support different forwarding methods
-* Enable efficient LAN communication
+* Learning MAC addresses
+* Reducing collision domains
+* Forwarding frames efficiently
+* Supporting high-speed full-duplex communication
 
-Mastering switching fundamentals is essential before moving on to VLANs, STP, trunking, and enterprise network design.
+Understanding these fundamentals prepares you for VLANs, trunking, STP, and enterprise-level network design.
 
 ---

@@ -1,18 +1,32 @@
-# 🧠 Computer Basics Series
+# 🧠 Computer Fundamentals for Cybersecurity
 
-This section introduces the **fundamental building blocks** of computer systems — from binary numbers to CPU operation.
+**Building the Foundation - Because You Can't Protect What You Don't Understand**
 
-## 📘 Lessons
+This section breaks down computer systems to their core components, with a clear focus on **security applications** and **hands-on implementation**.
 
-1. [Number System Basics](number-systems-and-exponents.md)
-2. [Common Bases and Exponents](./2-common-bases.md)
-3. [Encoding and Computer Layers](./3-encoding-and-computer-layers.md)
-4. [Computer Components Overview](./4-computer-components.md)
-5. [Measurement Units in Computing](./5-measurement-units.md)
-6. [CPU and RAM Explained](./6-cpu-and-ram.md)
-7. [Motherboard and Storage Devices](./7-motherboard-and-storage.md)
-8. [Mobile Devices and BIOS](./8-mobile-and-bios.md)
+## 🎯 Security-Focused Learning Path
+
+| Lesson | Core Concept | Security Application | Practical Project |
+|--------|--------------|---------------------|------------------|
+| 1. [Number Systems](number-systems-and-exponents.md) | Binary/Hex fundamentals | **Cryptography**, Data Encoding | Number converter with encryption examples |
+| 2. [Common Bases & Exponents](./2-common-bases.md) | Mathematical foundations | **Algorithm Analysis**, Hash Functions | Performance benchmarking tool |
+| 3. [Encoding & Computer Layers](./3-encoding-and-computer-layers.md) | Data representation | **Steganography**, Packet Analysis | Basic packet inspection script |
+| 4. [Computer Components](./4-computer-components.md) | Hardware architecture | **Hardware Security**, Physical Attacks | System inventory scanner |
+| 5. [Measurement Units](./5-measurement-units.md) | Digital metrics | **Performance Monitoring**, Capacity Planning | Resource monitoring tool |
+| 6. [CPU & RAM Explained](./6-cpu-and-ram.md) | Processing & memory | **Malware Analysis**, Memory Forensics | Process monitor with anomaly detection |
+| 7. [Motherboard & Storage](./7-motherboard-and-storage.md) | Storage systems | **Data Recovery**, Disk Encryption | File integrity checker |
+| 8. [Mobile & BIOS](./8-mobile-and-bios.md) | Firmware & mobile | **Secure Boot**, Mobile Security | BIOS settings auditor |
+
+## 🛠️ Build Your Security Toolkit
+
+Each lesson includes:
+- **🔒 Security Insights** - How this concept applies to cybersecurity
+- **💻 Hands-on Project** - Practical code and implementations  
+- **🎯 Real-world Scenarios** - Security use cases and examples
+
+## 🚀 Final Capstone Project
+**System Security Baseline Tool** - Combine all concepts into a comprehensive security monitoring script.
 
 ---
 
-> ✍️ Each lesson is written in English and focuses on clarity, precision, and technical depth to help beginners build a solid foundation in computing.
+> ⚡ **Why This Matters**: Understanding computer fundamentals isn't academic—it's the difference between following recipes and becoming a chef in cybersecurity.

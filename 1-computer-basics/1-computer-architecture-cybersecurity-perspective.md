@@ -2,7 +2,7 @@
 
 **Level:** Intermediate\
 **Category:** Computer Fundamentals for Cybersecurity\
-**Author:** Hemia Mouhamed Aymen \| Electrical Engineering Student\
+*
 **Academic Context:** USTHB University \| MSc Cybersecurity Candidate
 2027
 

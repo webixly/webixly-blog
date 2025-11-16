@@ -1,247 +1,302 @@
-# Computer Architecture Fundamentals: A Cybersecurity Perspective
+# 🧮 Lesson 01 — Number Systems  
+### Computer Fundamentals for Cybersecurity  
+### USTHB University → MSc Cybersecurity Preparation 2025–2027  
 
-**Level:** Intermediate\
-**Category:** Computer Fundamentals for Cybersecurity\
-*
-**Academic Context:** USTHB University \| MSc Cybersecurity Candidate
-2027
+---
 
-------------------------------------------------------------------------
 
-## 🎯 Executive Summary
+## 🎯 Lesson Purpose  
+This foundational lesson builds the essential mathematical and logical understanding of number systems. These concepts are the basis for cryptography, network protocol analysis, security encoding, malware analysis, and digital forensics.
 
-This document demonstrates my systematic approach to understanding
-computer systems from a cybersecurity perspective. As an Electrical
-Engineering student transitioning into cybersecurity, I bridge
-hardware-level understanding with software security applications.
+---
 
-------------------------------------------------------------------------
+# 🔥 1. Executive Summary  
 
-## 🔬 Technical Deep Dive
+Number systems form the **language of computers** and the foundation of all cybersecurity technologies.  
+Cryptographic algorithms, memory forensics, malware payloads, hashing functions, and network protocols all rely directly on binary, hexadecimal, and modular arithmetic.
 
-### Computer System Architecture
+This lesson ensures strong mastery of:
 
-A computer is an electronic device that processes information through
-coordinated hardware and software components. My electrical engineering
-background provides unique insights into the physical layer of
-computing.
+- Binary representation  
+- Hexadecimal notation  
+- Base conversions  
+- Bitwise operations  
+- Entropy & data strength  
+- Encoding & obfuscation techniques  
+- Cryptographic primitives using number systems  
 
-### Hardware-Software Integration
+---
 
--   **Hardware Layer**: Physical components (CPU, RAM, storage,
-    motherboard)\
--   **Software Layer**: Operating systems, applications, and security
-    protocols\
--   **Security Interface**: The critical intersection where
-    vulnerabilities emerge
+# 🔢 2. Number Systems Fundamentals  
 
-------------------------------------------------------------------------
+Computers operate strictly using binary logic. Cybersecurity requires understanding this representation for:
 
-## ⚙️ Component Security Analysis
+- Packet inspection  
+- Memory analysis  
+- Hashing  
+- Encryption  
+- Reverse engineering  
+- Firmware analysis  
 
-### 🧠 CPU Architecture & Security
+### 🟦 Supported Number Systems  
 
-**Technical Analysis:** - Instruction execution pipeline and potential
-hijacking points\
-- Multi-core processing security implications\
-- Cache-based side-channel attack vectors
+| System | Base | Digits Used | Cybersecurity Use |
+|--------|------|--------------|--------------------|
+| **Binary** | 2 | 0–1 | Cryptography, hashing, networking |
+| **Hexadecimal** | 16 | 0–F | Memory, forensics, disassembly |
+| **Decimal** | 10 | 0–9 | Human interpretation |
+| **Octal** | 8 | 0–7 | File permissions (Unix), legacy computing |
 
-**My Research Focus:** - Analyzing Spectre/Meltdown vulnerabilities at
-architectural level\
-- Developing CPU performance benchmarks for anomaly detection
+---
 
-------------------------------------------------------------------------
+# 🧮 3. Mathematical Concepts  
 
-### 💾 Memory Hierarchy Security
+### ✔ Positional Notation  
+Each digit’s value depends on its position multiplied by the base's power.
 
-**RAM Security Challenges:** - Volatile memory forensics and data
-recovery\
-- Memory allocation vulnerabilities (heap/stack attacks)\
-- DMA (Direct Memory Access) security risks
+Example:  
+Hex number `0x3AF`:
 
-**Practical Implementation:**
+3 × 16² + 10 × 16¹ + 15 × 16⁰
 
-``` python
-# Advanced memory analysis script
-import psutil
-import struct
+---
 
-def analyze_memory_patterns():
-    \"\"\"Analyze memory usage patterns for security anomalies\"\"\"
-    processes = []
-    for proc in psutil.process_iter(['pid', 'name', 'memory_info']):
-        try:
-            mem_usage = proc.info['memory_info'].rss / 1024 / 1024  # MB
-            processes.append({
-                'pid': proc.info['pid'],
-                'name': proc.info['name'],
-                'memory_mb': round(mem_usage, 2)
-            })
-        except (psutil.NoSuchProcess, psutil.AccessDenied):
-            continue
+### ✔ Base Conversion Algorithms  
 
-    processes.sort(key=lambda x: x['memory_mb'], reverse=True)
-    return processes[:10]
+#### 🔄 Decimal → Binary  
+Divide by 2 and track remainders.
+
+#### 🔄 Binary → Hex  
+Group bits in sets of 4.
+
+#### 🔄 Decimal → Hex  
+Divide by 16 and convert remainders.
+
+---
+
+### ✔ Bitwise Operations  
+Cybersecurity relies heavily on these operations.
+
+| Operator | Symbol | Effect |
+|----------|--------|--------|
+| AND | `&` | Masking bits |
+| OR | `\|` | Setting bits |
+| NOT | `~` | Bit inversion |
+| XOR | `^` | Cryptography, encryption |
+
+---
+
+# 🛡️ 4. Cybersecurity Applications  
+
+## 🔐 Cryptography  
+
+### ✔ XOR Cipher  
+The XOR operation is the mathematical backbone of:
+
+- Stream ciphers  
+- PRNG generators  
+- OTP encryption  
+- Hash function mixing  
+
+Example:
+
+```python
+def xor_cipher(data, key):
+    return bytes([data[i] ^ key[i % len(key)] for i in range(len(data))])
 ```
 
-------------------------------------------------------------------------
+---
 
-## 💽 Storage System Security
+## 🔍 Digital Forensics  
+Hexadecimal used in:
 
-**Threat Model Analysis:** - Data persistence vs. data remanence
-implications\
-- SSD vs. HDD vulnerability profiles\
-- Firmware-level storage attacks
+- Memory dumps  
+- Disk imaging  
+- Malware signatures  
+- Hash values  
 
-------------------------------------------------------------------------
+Example:
 
-## 🛡️ Hands-On Security Labs
-
-### Lab 1: Comprehensive System Reconnaissance
-
-``` bash
-#!/bin/bash
-# Advanced system security assessment script
-
-echo "=== SYSTEM SECURITY BASELINE ==="
-echo "Timestamp: $(date)"
-echo "---------------------------------"
-
-# Hardware Security Assessment
-echo "### HARDWARE SECURITY ###"
-sudo dmidecode -t processor | grep -E "(Version|Core Count|Current Speed)"
-sudo dmidecode -t memory | grep -E "(Size|Speed|Type)"
-sudo lshw -short | grep -E "(disk|network|processor)"
-
-# Firmware Security
-echo "### FIRMWARE SECURITY ###"
-sudo cat /sys/class/dmi/id/bios_version
-sudo efibootmgr 2>/dev/null || echo "UEFI not available"
-
-# Running Services Analysis
-echo "### SERVICES & PORTS ###"
-ss -tulnp | awk 'NR>1 {print $5, $7}' | sort -u
-sudo netstat -tulnp 2>/dev/null | grep LISTEN
-
-# Security Configuration
-echo "### SECURITY CONFIG ###"
-sudo getenforce 2>/dev/null || echo "SELinux not available"
-sudo ufw status 2>/dev/null || echo "UFW not available"
+```
+4D 5A 90 00 — file header of a Windows EXE
 ```
 
-------------------------------------------------------------------------
+---
 
-### Lab 2: Advanced Python Security Monitor
+## 🌐 Network Security  
+Binary and hex are required for:
 
-``` python
+- Packet dissection  
+- Protocol decoding  
+- Payload extraction  
+- Steganography detection  
+
+---
+
+# 💻 5. Full Project: Number Systems Security Toolkit  
+
+This is your first advanced security tool built using mathematical foundations.
+
+```python
 #!/usr/bin/env python3
-\"\"\"
-Advanced System Security Monitoring Tool
-Developed as part of my cybersecurity preparation journey
-\"\"\"
+"""
+Number Systems Security Toolkit
+Cryptographic applications of number system conversions
+"""
 
-import psutil
-import datetime
-import json
-from collections import defaultdict
-
-class AdvancedSecurityMonitor:
+class NumberSystemSecurity:
     def __init__(self):
-        self.baseline_established = False
-        self.process_baseline = set()
-
-    def establish_baseline(self):
-        current_processes = {p.pid for p in psutil.process_iter()}
-        self.process_baseline = current_processes
-        self.baseline_established = True
-        print("Baseline established")
-
-    def detect_anomalies(self):
-        if not self.baseline_established:
-            self.establish_baseline()
-            return {}
-
-        current_processes = {p.pid for p in psutil.process_iter()}
-        new_processes = current_processes - self.process_baseline
-
-        anomalies = {
-            'timestamp': str(datetime.datetime.now()),
-            'new_processes': len(new_processes),
-            'suspicious_ports': self.check_suspicious_ports(),
-            'high_cpu_processes': self.get_high_cpu_processes(),
-            'network_anomalies': self.check_network_anomalies()
+        self.character_sets = {
+            'binary': '01',
+            'decimal': '0123456789',
+            'hexadecimal': '0123456789ABCDEF',
+            'base64': 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'
         }
-        return anomalies
+    
+    def analyze_entropy(self, data, base_system):
+        """Calculate information entropy for security assessment"""
+        from math import log2
+        
+        base = 2 if base_system == 'binary' else \
+               16 if base_system == 'hexadecimal' else \
+               len(self.character_sets[base_system])
+        
+        entropy = len(data) * log2(base)
+        return entropy
+    
+    def xor_encrypt(self, plaintext, key):
+        """Basic XOR encryption demonstrating bitwise operations"""
+        encrypted = []
+        key_length = len(key)
+        
+        for i, char in enumerate(plaintext):
+            key_char = key[i % key_length]
+            encrypted_char = chr(ord(char) ^ ord(key_char))
+            encrypted.append(encrypted_char)
+        
+        return ''.join(encrypted)
+    
+    def password_strength_analysis(self, password):
+        """Analyze password strength using number system concepts"""
+        import string
+        
+        char_sets_used = 0
+        if any(c in string.digits for c in password):
+            char_sets_used += 10
+        if any(c in string.ascii_lowercase for c in password):
+            char_sets_used += 26
+        if any(c in string.ascii_uppercase for c in password):
+            char_sets_used += 26
+        if any(c in string.punctuation for c in password):
+            char_sets_used += 32
+        
+        possible_combinations = char_sets_used ** len(password)
+        time_to_crack = possible_combinations / (1e9 * 3600)
+        
+        return {
+            'password_length': len(password),
+            'character_set_size': char_sets_used,
+            'possible_combinations': possible_combinations,
+            'estimated_crack_time_hours': time_to_crack
+        }
 
-    def check_suspicious_ports(self):
-        suspicious_ports = []
-        for conn in psutil.net_connections(kind='inet'):
-            if conn.status == 'LISTEN' and conn.laddr.port > 30000:
-                suspicious_ports.append(conn.laddr.port)
-        return suspicious_ports
-
-    def get_high_cpu_processes(self):
-        high_cpu = []
-        for proc in psutil.process_iter(['pid', 'name', 'cpu_percent']):
-            try:
-                if proc.info['cpu_percent'] > 20.0:
-                    high_cpu.append(proc.info)
-            except (psutil.NoSuchProcess, psutil.AccessDenied):
-                continue
-        return high_cpu
-
-    def check_network_anomalies(self):
-        connections = psutil.net_connections()
-        conn_by_remote = defaultdict(int)
-
-        for conn in connections:
-            if conn.raddr:
-                conn_by_remote[conn.raddr.ip] += 1
-
-        return {ip: count for ip, count in conn_by_remote.items() if count > 10}
-
+# Demonstration
 if __name__ == "__main__":
-    monitor = AdvancedSecurityMonitor()
-    anomalies = monitor.detect_anomalies()
-    print("Security Anomalies Detected:")
-    print(json.dumps(anomalies, indent=2))
+    nst = NumberSystemSecurity()
+    
+    print("\n--- Entropy Calculation ---")
+    entropy = nst.analyze_entropy("110010101001", 'binary')
+    print(f"Binary Data Entropy: {entropy:.2f} bits")
+    
+    print("\n--- XOR Encryption Demo ---")
+    message = "ConfidentialData"
+    key = "SecretKey"
+    encrypted = nst.xor_encrypt(message, key)
+    decrypted = nst.xor_encrypt(encrypted, key)
+    print("Original:", message)
+    print("Encrypted:", encrypted)
+    print("Decrypted:", decrypted)
+    
+    print("\n--- Password Strength ---")
+    strength = nst.password_strength_analysis("MySecure123!")
+    print(strength)
 ```
 
-------------------------------------------------------------------------
+---
 
-## 🎓 Academic Integration
+# 🧪 6. Security Lab Exercises  
 
-### Connecting Electrical Engineering to Cybersecurity
+## 🧩 Lab 1 — Base Conversions for Cryptography  
+```python
+def crypto_base_conversion():
+    memory_address = 4096
+    hex_address = hex(memory_address)
+    print(f"Memory Address: {memory_address} -> {hex_address}")
+    
+    binary_data = 0b11001010
+    mask = 0b11110000
+    result = binary_data & mask
+    print(f"Bitwise AND: {bin(binary_data)} & {bin(mask)} = {bin(result)}")
+```
 
--   Signal Processing → Network traffic pattern analysis\
--   Circuit Theory → Hardware-based attack vectors\
--   Control Systems → System stability models for security
+---
 
-### Research Directions
+## 🧩 Lab 2 — Data Obfuscation  
+```python
+def data_obfuscation():
+    sensitive_data = "AdminPassword123"
+    
+    hex_representation = sensitive_data.encode().hex()
+    print(f"Hex Obfuscated: {hex_representation}")
+    
+    restored = bytes.fromhex(hex_representation).decode()
+    print(f"Restored: {restored}")
+```
 
--   Hardware-Assisted Security\
--   Energy-Based Intrusion Detection\
--   Embedded Systems Security for IoT
+---
 
-------------------------------------------------------------------------
+# 📚 7. Academic Integration  
 
-## 📊 Project Portfolio Integration
+### ➤ Electrical Engineering Value  
+Your EE background adds powerful advantages:
 
--   Network Security Analyzer\
--   System Hardening Scripts\
--   Malware Execution Environment Analysis
+- Binary logic circuits  
+- Signal encoding  
+- Information theory (entropy)  
+- Numerical analysis  
 
-------------------------------------------------------------------------
+### ➤ Cybersecurity Relevance  
+Number systems apply directly in:
 
-## 🔐 Professional Insights
+- Encryption  
+- Memory forensics  
+- Steganography  
+- Protocol analysis  
+- Secure coding  
+- Hashing algorithms  
 
--   Defense in depth through architectural understanding\
--   Proactive security via behavior baselining\
--   Cross-disciplinary approach to solving security challenges
+---
 
-------------------------------------------------------------------------
+# 🎓 8. Learning Outcomes  
 
-## 🚀 Next Evolution
+### ✔ Technical Competencies  
+- Full mastery of number systems  
+- Bitwise logic and cryptographic reasoning  
+- Entropy and strength analysis  
+- Development of complete security tools  
 
-Developing specialized security tools and contributing to academic
-research in system security architecture.
+### ✔ Analytical Skills  
+- Mathematical thinking applied to cybersecurity  
+- System decomposition  
+- Low-level data interpretation  
+
+---
+
+# 📅 9. Lesson Status  
+**Completed: November 2025**  
+Part of: *USTHB Electrical Engineering → MSc Cybersecurity Preparation (2025–2027)*  
+
+---
+
+> **"True cybersecurity starts with understanding how data is represented, stored, and transformed."**
+

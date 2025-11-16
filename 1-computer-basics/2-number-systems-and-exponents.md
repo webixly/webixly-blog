@@ -1,6 +1,6 @@
 # 🧮 Lesson 2 — Mathematical Exponents: Cryptographic Strength Foundations  
 ### Computer Fundamentals for Cybersecurity  
-### Duration: | Level: Intermediate | Status: Completed  
+### | Level: Intermediate | Status: Completed  
 
 ---
 

@@ -1,32 +1,117 @@
 # 🧠 Computer Fundamentals for Cybersecurity
 
-**Building the Foundation - Because You Can't Protect What You Don't Understand**
+## Building Hardware-to-Security Expertise
 
-This section breaks down computer systems to their core components, with a clear focus on **security applications** and **hands-on implementation**.
-
-## 🎯 Security-Focused Learning Path
-
-| Lesson | Core Concept | Security Application | Practical Project |
-|--------|--------------|---------------------|------------------|
-| 1. [Number Systems](number-systems-and-exponents.md) | Binary/Hex fundamentals | **Cryptography**, Data Encoding | Number converter with encryption examples |
-| 2. [Common Bases & Exponents](./2-common-bases.md) | Mathematical foundations | **Algorithm Analysis**, Hash Functions | Performance benchmarking tool |
-| 3. [Encoding & Computer Layers](./3-encoding-and-computer-layers.md) | Data representation | **Steganography**, Packet Analysis | Basic packet inspection script |
-| 4. [Computer Components](./4-computer-components.md) | Hardware architecture | **Hardware Security**, Physical Attacks | System inventory scanner |
-| 5. [Measurement Units](./5-measurement-units.md) | Digital metrics | **Performance Monitoring**, Capacity Planning | Resource monitoring tool |
-| 6. [CPU & RAM Explained](./6-cpu-and-ram.md) | Processing & memory | **Malware Analysis**, Memory Forensics | Process monitor with anomaly detection |
-| 7. [Motherboard & Storage](./7-motherboard-and-storage.md) | Storage systems | **Data Recovery**, Disk Encryption | File integrity checker |
-| 8. [Mobile & BIOS](./8-mobile-and-bios.md) | Firmware & mobile | **Secure Boot**, Mobile Security | BIOS settings auditor |
-
-## 🛠️ Build Your Security Toolkit
-
-Each lesson includes:
-- **🔒 Security Insights** - How this concept applies to cybersecurity
-- **💻 Hands-on Project** - Practical code and implementations  
-- **🎯 Real-world Scenarios** - Security use cases and examples
-
-## 🚀 Final Capstone Project
-**System Security Baseline Tool** - Combine all concepts into a comprehensive security monitoring script.
+**Academic Level:** Undergraduate Preparation for MSc Cybersecurity  
+**Institution:** USTHB University - Electrical Engineering  
+**Target:** MSc Cybersecurity 2027 Admission  
+**Status:** Completed Foundation Phase
 
 ---
 
-> ⚡ **Why This Matters**: Understanding computer fundamentals isn't academic—it's the difference between following recipes and becoming a chef in cybersecurity.
+## 📚 Curriculum Overview
+
+| # | Topic | Duration | Core Concept | Cybersecurity Application |
+|---|-------|----------|--------------|---------------------------|
+| 1 | **Number Systems** | 33:37 | Binary/Hex Fundamentals | Cryptography, Data Encoding |
+| 2 | **Mathematical Exponents** | 26:03 | Bases & Exponential Math | Algorithm Complexity, Hash Functions |
+| 3 | **Encoding & System Layers** | 21:44 | Data Representation | Steganography, Protocol Analysis |
+| 4 | **Computer Components** | 19:22 | Hardware Architecture | Hardware Security, Physical Defense |
+| 5 | **Measurement Units** | 09:16 | Digital Metrics | Performance Monitoring, Capacity Planning |
+| 6 | **CPU & RAM Architecture** | 23:33 | Processing & Memory | Malware Analysis, Memory Forensics |
+| 7 | **Motherboard & Storage** | 11:53 | Storage Systems | Data Recovery, Disk Encryption |
+| 8 | **Mobile & BIOS Security** | 24:16 | Firmware & Mobile | Secure Boot, Mobile Security |
+
+---
+
+## 🎯 Learning Outcomes Demonstrated
+
+### Technical Competencies
+- **Systems Thinking:** Understanding computer architecture from transistors to applications
+- **Mathematical Foundation:** Mastery of number systems for cryptographic applications
+- **Hardware Security:** Physical layer understanding for comprehensive protection
+- **Analytical Skills:** Breaking complex systems into securable components
+
+### Cybersecurity Applications
+Each topic includes practical security implementations:
+- Cryptographic algorithms using number theory
+- Memory analysis for digital forensics
+- System hardening based on architecture understanding
+- Firmware security assessment techniques
+
+---
+
+## 🔬 Practical Security Projects
+
+### Completed Implementations
+1. **Number Systems Security Analyzer** - Data encoding/decoding with encryption
+2. **Cryptographic Strength Calculator** - Algorithm complexity and hash analysis
+3. **Data Encoding Security Tool** - Steganography and protocol analysis
+4. **Hardware Security Assessment** - Component vulnerability analysis
+5. **System Performance Monitor** - Resource monitoring and anomaly detection
+6. **Memory Forensics Toolkit** - RAM analysis and process monitoring
+7. **Storage Security Auditor** - Data integrity and encryption verification
+8. **Firmware Security Analyzer** - BIOS and mobile security assessment
+
+### Technical Skills Demonstrated
+- **Programming:** Python security scripts and automation tools
+- **System Analysis:** Comprehensive hardware and software assessment
+- **Security Hardening:** Implementation of defense mechanisms
+- **Documentation:** Professional technical writing and analysis
+
+---
+
+## 🎓 Academic Value Proposition
+
+### Unique Electrical Engineering Perspective
+My background provides:
+- **Circuit-level understanding** of computer components
+- **Mathematical rigor** from engineering education
+- **Systems thinking** for comprehensive security approaches
+- **Research methodology** for complex problem-solving
+
+### Preparation for Graduate Studies
+This foundation enables:
+- Advanced cryptography and cryptanalysis
+- Secure system architecture design
+- Malware analysis and reverse engineering
+- Research in hardware-assisted security
+
+---
+
+## 📈 Progress Assessment
+
+### Knowledge Acquisition
+- **8 comprehensive technical domains** mastered
+- **8 practical security projects** implemented
+- **Progressive complexity** from basic to advanced topics
+- **Cybersecurity focus** in every implementation
+
+### Skill Development
+- ✅ **Technical Documentation** - Professional-grade writeups
+- ✅ **Security Tool Development** - Functional implementations
+- ✅ **System Analysis** - Comprehensive assessment capabilities
+- ✅ **Research Preparation** - Methodology and critical thinking
+
+---
+
+## 🔮 Next Development Phase
+
+### Immediate Focus
+- Network Security & Protocol Analysis
+- Linux Security Administration
+- Cryptographic Implementations
+
+### Research Directions
+- Hardware-based security enhancements
+- Energy analysis for intrusion detection
+- Embedded systems security for IoT
+
+---
+
+> 🎯 **"True cybersecurity begins with understanding what you're protecting."**
+> This foundation transforms abstract computer concepts into actionable security knowledge, enabling effective protection of digital systems at their most fundamental level.
+
+---
+*Documenting the journey from Electrical Engineering to Cybersecurity Excellence*  
+*USTHB University | MSc Cybersecurity Preparation 2025-2027*

@@ -11,16 +11,16 @@
 
 ## 📚 Curriculum Overview
 
-| # | Topic | Duration | Core Concept | Cybersecurity Application |
-|---|-------|----------|--------------|---------------------------|
-| 1 | **Number Systems** | 33:37 | Binary/Hex Fundamentals | Cryptography, Data Encoding |
-| 2 | **Mathematical Exponents** | 26:03 | Bases & Exponential Math | Algorithm Complexity, Hash Functions |
-| 3 | **Encoding & System Layers** | 21:44 | Data Representation | Steganography, Protocol Analysis |
-| 4 | **Computer Components** | 19:22 | Hardware Architecture | Hardware Security, Physical Defense |
-| 5 | **Measurement Units** | 09:16 | Digital Metrics | Performance Monitoring, Capacity Planning |
-| 6 | **CPU & RAM Architecture** | 23:33 | Processing & Memory | Malware Analysis, Memory Forensics |
-| 7 | **Motherboard & Storage** | 11:53 | Storage Systems | Data Recovery, Disk Encryption |
-| 8 | **Mobile & BIOS Security** | 24:16 | Firmware & Mobile | Secure Boot, Mobile Security |
+| # | Topic | Core Concept | Cybersecurity Application |
+|---|-------|--------------|---------------------------|
+| 1 | **Number Systems** | Binary/Hex Fundamentals | Cryptography, Data Encoding |
+| 2 | **Mathematical Exponents** |  Bases & Exponential Math | Algorithm Complexity, Hash Functions |
+| 3 | **Encoding & System Layers** |  Data Representation | Steganography, Protocol Analysis |
+| 4 | **Computer Components** |  Hardware Architecture | Hardware Security, Physical Defense |
+| 5 | **Measurement Units** |  Digital Metrics | Performance Monitoring, Capacity Planning |
+| 6 | **CPU & RAM Architecture** |  Processing & Memory | Malware Analysis, Memory Forensics |
+| 7 | **Motherboard & Storage** |  Storage Systems | Data Recovery, Disk Encryption |
+| 8 | **Mobile & BIOS Security** | Firmware & Mobile | Secure Boot, Mobile Security |
 
 ---
 

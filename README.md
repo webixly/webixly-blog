@@ -89,14 +89,16 @@ from the **basics of computing** to the **core of ethical hacking**.
 
 ---
 
-### 🛡️ 4️⃣ Ethical Hacking & Security (On the Way)  
-> 🕵️‍♂️ Practical offensive & defensive topics coming soon — stay tuned.
+### 🛡️ 4️⃣ Ethical Hacking & Security  
 
-- 🔜 Reconnaissance (coming soon)  
-- 🔜 Scanning & Enumeration (coming soon)  
-- 🔜 Exploitation Basics (coming soon)  
-- 🔜 Post-Exploitation (coming soon)
-- 🔜 and more.......
+> 🕵️‍♂️ Practical offensive & defensive topics.
+
+- 🔍 Reconnaissance (Passive & Active)
+- 🌐 OSINT Techniques
+- 🧰 Tools: whois, nslookup, dig, theHarvester
+- 📡 Subdomain Enumeration
+- 🔎 Google Dorking
+- ............
 ---
 
 ## 🧠 About This Repository  
